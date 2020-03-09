@@ -1,0 +1,32 @@
+<div fxLayoutAlign="center center" height="100vh">
+  <mat-card fxFlex="30" fxFlex.sm="30" fxFlex.xs="100">
+    <mat-toolbar color="warn" fxLayoutAlign="center center">
+      <span>Edit the Player details here</span>
+    </mat-toolbar>
+    <br>
+    <div fxLayout="column">
+      <mat-form-field appearance="outline">
+        <mat-label>Player Name :</mat-label>
+        <input matInput placeholder="Enter player name" [formControl]="name">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Player Description :</mat-label>
+        <input matInput placeholder="Describe" [formControl]="description">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Jersy No</mat-label>
+        <input matInput placeholder="jersy number" [formControl]="jersyno" >
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Sport</mat-label>
+        <input matInput placeholder="sport" [formControl]="sport">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Country</mat-label>
+        <input matInput placeholder="country" [formControl]="country">
+      </mat-form-field>
+      <div style="text-align:right">
+      <button (click)="save()" mat-stroked-button color="primary">Save</button>
+      </div>
+
+    </div>

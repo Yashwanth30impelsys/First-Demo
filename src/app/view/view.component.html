@@ -1,0 +1,37 @@
+<div>
+  <mat-card class="add">
+    <div fxLayout="column" fxLayoutGap="20px">
+      <div>
+        <span>Player Name : {{player.name}}</span>
+
+      </div>
+      <div>
+        <!-- <span>{{player.image}}</span> -->
+        <img src="{{player.image}}" alt="Smiley face"> 
+      </div>
+      <div>
+        <span>Player Description : {{player.description}}</span>
+
+      </div>
+      <div>
+        <span>Sport : {{player.sport}}</span>
+
+      </div>
+      <span>Jersy Number : {{player.jersyno}}</span>
+
+    </div>
+    <div>
+      <span>Country Name : {{player.country}}</span>
+
+    </div>
+    <br>
+    <div fxLayout="row" fxLayoutGap="50px">
+      <div>
+        <button (click)="editPlayer()" mat-stroked-button color="warn">Edit Player</button>
+      </div>
+      <div>
+        <button (click)="deletePlayer()" mat-stroked-button color="warn">Delete Player</button>
+      </div>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,32 @@
+<div fxLayout="row" fxLayoutAlign="center center" height="100vh">
+  <mat-card fxFlex="30" fxFlex.sm="30" fxFlex.xs="100">
+    <mat-toolbar color="warn" fxLayoutAlign="center center">
+      <span>Enter the Player details to be added</span>
+    </mat-toolbar>
+    <br>
+    <div fxLayout="column">
+      <mat-form-field appearance="outline">
+        <mat-label>Player Name</mat-label>
+        <input matInput placeholder="Enter player name" (formControl)="name" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <input matInput placeholder="describe player" (formControl)="description" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Sport</mat-label>
+        <input matInput placeholder="enter sport" (formControl)="sport" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Jersy No</mat-label>
+        <input matInput placeholder="enter jersy no" (formControl)="jersyno" required>
+      </mat-form-field>
+      <mat-form-field appeareance="outline">
+        <mat-label>Country</mat-label>
+        <input matInput placeholder="enter country name" (formControl)="country" required>
+      </mat-form-field>
+      <div style="text-align:right">
+        <button (click)="add()" mat-stroked-button color="primary">Add</button>
+      </div>
+
+    </div>

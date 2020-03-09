@@ -1,0 +1,47 @@
+<div class="maindiv" fxLayoutGap="100px" fxLayout="column" fxFlex="100">
+
+  <mat-toolbar class="toolbar">
+
+    <mat-toolbar-row style="background-color: green;color:whitesmoke;">
+
+      <!-- <mat-icon>whatshot</mat-icon> -->
+
+      <span style="font-size: 30px; ">My Team</span>
+      <span class="spacer"></span>
+      <button mat-icon-button [routerLink]="['main']">
+        <mat-icon style="color:darkorange"><strong>Home</strong></mat-icon>
+      </button>
+    </mat-toolbar-row>
+    <span class="spacer"></span>
+
+    <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center" style="background-color: rgb(47, 53, 51)">
+      <mat-icon>account_balance</mat-icon>
+      <!-- <span style="font-size: 20px; ">Books:Guide to Answers</span> -->
+
+      <mat-toolbar-row class="spacer"></mat-toolbar-row>
+
+      <button mat-flat-button [matMenuTriggerFor]="menu" style="background-color:indigo;color: white">Menu</button>
+
+      <mat-menu #menu="matMenu">
+
+        <button mat-menu-item [routerLink]="['add']">Add Player</button>
+        <button mat-menu-item [routerLink]="['edit']">Edit Player</button>
+        <!-- <button mat-menu-item [routerLink]="['delete']">Delete Player</button> -->
+
+      </mat-menu>
+
+    </mat-toolbar-row>
+
+  </mat-toolbar>
+
+
+
+  <mat-sidenav-container fxFlexFill style="top:150px !important;" fxLayout="row" fxLayoutAlign="start none">
+    <mat-sidenav-content fxFlexFill style="background-color: white;overflow-y: visible;padding-bottom: 200px;">
+
+      <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>
